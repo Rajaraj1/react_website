@@ -1,25 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
-
+// import {User} from './User';
+import Users from './Users';
 function App() {
+// Component inside component
+
+function Apple(){
+  return(<div>Apple Component</div>)
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <h1>Hello World</h1>
+      <User/>
+      <User/>
+      <User/> */}
+      <Users/>
+      {Apple()}
+      <Apple/>
     </div>
   );
+}
+
+function User(){
+  return(
+  <div>
+  <h1>Hello bhai</h1>
+  <h1>Hello World</h1>
+  </div>
+  )
 }
 
 export default App;
